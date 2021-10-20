@@ -48,3 +48,33 @@ textarea {
     scroll-behavior: auto !important;
   }
 }
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  max-width: 80rem;
+  padding-inline: 2em;
+  margin-inline: auto;
+}
+
+/* only for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
