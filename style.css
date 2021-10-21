@@ -1,3 +1,11 @@
+/* custom properties */
+
+:root {
+  --dark: 230 35% 7%;
+  --light: 231 77% 90%;
+  --white: 0 0% 100%;
+}
+
 /* reset */
 *,
 ::before,
@@ -38,7 +46,7 @@ textarea {
 }
 
 /* remove animations for preferences */
-@media (prefers-reduced-motion: reduce) {  
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -49,6 +57,7 @@ textarea {
   }
 }
 
+/* utilities class */
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
@@ -78,3 +87,30 @@ textarea {
   border: 0;
 }
 
+.bg-dark {
+  background-color: hsl(var(--dark));
+}
+
+.bg-accent {
+  background-color: hsl( var(--light) );
+}
+
+.bg-accent-alpha {
+  background-color: hsl( var(--light) / .2 );
+}
+
+.bg-white {
+  background-color: hsl( var(--white) );
+}
+
+.text-dark {
+  color: hsl(var(--dark));
+}
+
+.text-accent {
+  color: hsl( var(--light) );
+}
+
+.text-white {
+  color: hsl( var(--white) );
+}
